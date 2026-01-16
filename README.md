@@ -4,6 +4,12 @@ An automated financial backend system designed to track a diversified multi-asse
 
 ---
 
+## Execution
+
+![Portfolio Automation Execution](./Output.png)
+
+---
+
 ## Key Features
 - Automated Data Ingestion: Periodically fetches real-time market prices for assets like Vedanta (VEDL.NS), Silver BeES (SILVERBEES.NS), etc using the yfinance API.
 - Cloud Integration: Managed NoSQL data storage using MongoDB Atlas for persistent historical logging.
