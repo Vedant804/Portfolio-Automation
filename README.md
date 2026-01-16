@@ -2,11 +2,20 @@
 
 An automated financial backend system designed to track a diversified multi-asset portfolio (Equities and ETFs) in real-time. This project replaces manual market monitoring with a 24/7 autonomous ingestion pipeline, logging market "heartbeats" directly to a cloud-hosted NoSQL infrastructure.
 
+---
+
 ## Key Features
-- Automated Data Ingestion: Periodically fetches real-time market prices for assets like Vedanta (VEDL.NS) and Silver BeES (SILVERBEES.NS) using the yfinance API.
+- Automated Data Ingestion: Periodically fetches real-time market prices for assets like Vedanta (VEDL.NS), Silver BeES (SILVERBEES.NS), etc using the yfinance API.
 - Cloud Integration: Managed NoSQL data storage using MongoDB Atlas for persistent historical logging.
 - Operational Reliability: Built-in logging and error-handling to ensure system stability and data integrity.
 - Secure Credential Management: Uses environment variables (.env) to keep sensitive cloud connection strings secure.
+
+---
+
+## System Architecture
+```bash
+Data Flow: yfinance API (Market Data) → Python Engine (Processing & Logic) → MongoDB Atlas (Cloud Storage)
+```
 
 ---
 
@@ -18,6 +27,8 @@ An automated financial backend system designed to track a diversified multi-asse
 | **Database** | MongoDB Atlas (Cloud NoSQL) |
 | **Security** | python-dotenv |
 | **Infrastructure** | MongoDB Cloud & Git |
+
+---
 
 ## Repository Structure
 
@@ -34,7 +45,7 @@ portfolio-automation/
 
 ---
 
-##Setup & Installation
+## Setup & Installation
 
 To run this project locally, follow these steps:
 1. Clone the Repository
@@ -42,7 +53,7 @@ To run this project locally, follow these steps:
 git clone https://github.com/Vedant804/portfolio-automation.git
 cd portfolio-automation
 ```
-2.Set up Virtual Environment
+2. Set up Virtual Environment
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
@@ -60,5 +71,3 @@ DB_NAME=IWealthProject
 ```bash
 python src/automation.py
 ```
-
-python src/automation.py
