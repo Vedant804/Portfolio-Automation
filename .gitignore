@@ -1,0 +1,13 @@
+# Security: Sensitive credentials
+.env
+
+# Virtual environment
+venv/
+.venv/
+
+# Python system files
+__pycache__/
+*.py[cod]
+
+# IDE specific files
+.vscode/
